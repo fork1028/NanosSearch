@@ -1,0 +1,41 @@
+<!--miniprogram/pages/logs/logs.wxml-->
+<wxs module="output1">
+var getOutput=function(choice1){
+  if(choice1=="6-10岁")
+    return "0516或0524"
+  if(choice1=="10-16岁")
+    return "0616或0624"
+  if(choice1==">16岁")
+    return "0716或0724"
+}
+module.exports.getOutput=getOutput;
+</wxs>
+
+<wxs module="output2">
+var getOutput=function(choice2){
+  if(choice2=="上颌窦")
+    return "90或110"
+  if(choice2=="额窦")
+    return "70"
+  if(choice2=="蝶窦")
+    return "0或30"
+  if(choice2=="上颌窦+额窦")
+    return "90或110+70"
+  if(choice2=="上颌窦+蝶窦")
+    return "90或110+0或30"
+  if(choice2=="额窦+蝶窦")
+    return "70+0或30"
+  if(choice2=="上颌窦+额窦+蝶窦")
+    return "90或110+70+0或30"
+}
+module.exports.getOutput=getOutput;
+</wxs>
+
+<text>您的年龄为{{choice1}}</text>
+<text>您选择的鼻窦类型为{{choice2}}</text>
+<text>输出结果为</text>
+<text>鼻窦球囊导管：{{output1.getOutput(choice1)}}</text>
+<text>鼻窦引导导管：{{output2.getOutput(choice2)}}</text>
+<view class="btn-area">
+<button form-type="submit" bindtap='LogBtn'>重新选择</button>
+</view>

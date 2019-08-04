@@ -1,0 +1,10 @@
+var filter={
+  output1:function(choice1){
+    if(choice1=="6-10岁")
+      return "0516或0524"
+  }
+}
+
+module.exports={
+  output1:filter.output1
+}

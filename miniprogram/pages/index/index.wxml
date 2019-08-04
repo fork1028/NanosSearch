@@ -1,0 +1,27 @@
+<!--miniprogram/pages/index/index.wxml-->
+
+<view class="section">
+    <view class="section__title">请选择年龄</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 当前选择：{{array[index]}}
+        </button>
+        
+        
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section__title">请选择鼻窦类型</view>
+    <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+      <view class="picker">
+        当前选择：{{array2[index2]}}
+      </view>
+    </picker>
+  </view>
+
+  <view class="btn-area">
+    <button form-type="submit" bindtap='LogBtn'>提交</button>
+  </view>
+
