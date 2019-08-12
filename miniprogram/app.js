@@ -15,7 +15,7 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = { isApproved:false}
   },
 
   onShow: function(){
@@ -29,5 +29,6 @@ App({
   globalData: {
     userInfo: null
   }
+
 
 })

@@ -2,6 +2,7 @@
 
 var app = getApp();//取得全局App({..})实例
 var userInfo = app.globalData.userInfo;//取得全局变量需要的值
+var isApproved=app.globalData.isApproved;
 
 var choice1;
 var choice2;
@@ -11,13 +12,51 @@ Page({
   /**
    * Page initial data
    */
-  LogBtn: function(options){
-    wx.navigateTo({
-      url: '../logs/logs?choice1=' + choice1 + '&choice2=' + choice2
-    })
+  
+
+  LogBtn: function (options) {
+
+
+    if(choice1==undefined){
+      isApproved=false;
+    }
+    else if (choice2 == undefined) {
+      isApproved = false;
+    }
+    else if(choice1!=undefined&&choice2!=undefined){
+      isApproved=true;
+    }
+    
+
+    console.log('isApproved:', isApproved)
+    if (isApproved==false){
+      wx.showModal({
+        title: '提示',
+        content: '还未选择年龄/鼻窦类型\r\n *若您左滑返回首页，请重新选择2项数据再确定*',
+        showCancel:false,
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
+    if (isApproved == true) {
+      wx.navigateTo({
+        url: '../logs/logs?choice1=' + choice1 + '&choice2=' + choice2
+      })
+      isApproved=false;
+      choice1=undefined;
+      choice2=undefined;
+    }
   },
 
   data: {
+
+    modalHidden: true,
+
     array: ['6-10岁', '10-16岁', '>16岁'],
     objectArray: [
       {
@@ -63,7 +102,8 @@ Page({
         id :6,
         name: '上颌窦+额窦+蝶窦'
       }
-    ]
+    ],
+    
   },
 
   bindPickerChange: function (e) {
@@ -86,6 +126,29 @@ Page({
 
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
+  },
+
+ 
+  /**
+   * 点击取消
+   */
+  modalCandel: function () {
+    // do something
+    this.setData({
+      modalHidden: true
+    })
+  },
+
+  /**
+   *  点击确认
+   */
+  modalConfirm: function () {
+    // do something
+    this.setData({
+      modalHidden: true
+    })
   }
+
+  
 
 })

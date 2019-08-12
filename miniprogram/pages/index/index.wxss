@@ -1,13 +1,78 @@
 /* miniprogram/pages/index/index.wxss */
 /** wxss **/
-/** 修改button默认的点击态样式类**/
-.button-hover {
-  background-color: red;
-}
-/** 添加自定义button点击态样式类**/
-.other-button-hover {
-  background-color: blue;
-}
-button {margin: 10px;}
 
+
+.backgroundIcon{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50rpx;
+  margin-bottom:50rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right:0;
+}
+
+.daoguan{
+  display: flex;
+  margin-bottom:50rpx;
+  justify-content: flex-end;
+  position: fixed;
+  top:20rpx;
+  left: 0;
+  right:20rpx;
+}
+
+.anshiqing{
+  display: flex;
+  justify-content: flex-front;
+  margin-bottom:50rpx;
+  position: fixed;
+  top: 40rpx;
+  left: 20rpx;
+  right:0;
+}
+
+.age{
+  display:flex;                    
+   justify-content: left; 
+   margin-top: 300rpx;
+   margin-left: 30rpx;
+}
+
+.picker1{
+  display:flex;                    
+   justify-content: center; 
+   margin-top: 50rpx;
+}
+
+.type{
+  display:flex;                    
+  justify-content: left; 
+  margin-top: 100rpx;
+   margin-left: 30rpx;
+}
+
+
+.picker2{
+  display:flex;                    
+   justify-content: center; 
+   margin-top: 50rpx;
+}
+
+.button-hover{
+  background-color:#DDE8EF;
+}
+
+.btn1 {
+  margin-top: 200rpx;
+  margin-left:200rpx;
+  margin-right:200rpx;
+  background-color: #DDE8EF;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

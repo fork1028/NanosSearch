@@ -1,4 +1,10 @@
 <!--miniprogram/pages/logs/logs.wxml-->
+
+<view class='backgroundImage'>
+<image class='nanos'
+src='https://s2.ax1x.com/2019/08/12/ezJESH.png'mode="widthFix"></image>
+</view>
+
 <wxs module="output1">
 var getOutput=function(choice1){
   if(choice1=="6-10岁")
@@ -30,12 +36,30 @@ var getOutput=function(choice2){
 }
 module.exports.getOutput=getOutput;
 </wxs>
-
-<text>您的年龄为{{choice1}}</text>
-<text>您选择的鼻窦类型为{{choice2}}</text>
-<text>输出结果为</text>
-<text>鼻窦球囊导管：{{output1.getOutput(choice1)}}</text>
-<text>鼻窦引导导管：{{output2.getOutput(choice2)}}</text>
-<view class="btn-area">
+<view class='selectedAge'>
+<text>您选择的年龄为：</text>
+<text class='choice1'>{{choice1}}</text>
+</view>
+<view class='selectedType'>
+<text>您选择的鼻窦类型为：</text>
+<text class='choice2'>{{choice2}}</text>
+</view>
+<view class='output'>
+<text>选择结果：</text>
+</view>
+<view class='qiunang'>
+<text>鼻窦球囊导管：</text>
+<text class='output1'>{{output1.getOutput(choice1)}}</text>
+</view>
+<view class='yindao'>
+<text>鼻窦引导导管：</text>
+<text class='output2'>{{output2.getOutput(choice2)}}</text>
+</view>
+<view class='btn'>
 <button form-type="submit" bindtap='LogBtn'>重新选择</button>
+</view>
+
+<view class='backgroundIcon'>
+<image class='icon'
+src='https://s2.ax1x.com/2019/08/12/eza1Qe.png'mode="widthFix"style="width: 80px; height: 80px;"></image>
 </view>

@@ -1,2 +1,84 @@
 /* miniprogram/pages/logs/logs.wxss */
 
+.backgroundImage{
+ display: flex;
+  justify-content: flex-end;
+  margin-right: 50rpx;
+  margin-bottom:50rpx;
+  position: fixed;
+  bottom: 200rpx;
+  left: 0;
+  right:0;
+}
+
+
+
+.backgroundIcon{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50rpx;
+  margin-bottom:50rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right:0;
+}
+
+.selectedAge{
+  display:flex;                    
+   justify-content: left; 
+   margin-top: 100rpx;
+   margin-left: 30rpx;
+}
+
+.selectedType{
+  display:flex;                    
+   justify-content: left; 
+   margin-top: 100rpx;
+   margin-left: 30rpx;
+}
+
+.output{
+  display:flex;                    
+   justify-content: center; 
+   margin-top: 100rpx;
+   margin-left: 30rpx;
+   
+}
+.choice1{
+  color: rgb(0, 83, 179);
+}
+.choice2{
+  color: rgb(0, 83, 179);
+}
+
+.output1{
+  color: rgb(0, 83, 179);
+}
+.output2{
+  color: rgb(0, 83, 179);
+}
+.qiunang{
+  display:flex;                    
+   justify-content: left; 
+   margin-top: 100rpx;
+   margin-left: 30rpx;
+}
+
+.yindao{
+  display:flex;                    
+   justify-content: left; 
+   margin-top: 100rpx;
+   margin-left: 30rpx;
+}
+
+.btn {
+  margin-top: 150rpx;
+  margin-left:200rpx;
+  margin-right:200rpx;
+  background-color: #DDE8EF;
+  color: white;
+  border-radius: 98rpx;
+  display: flex;
+  justify-content: center;
+}

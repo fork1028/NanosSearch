@@ -1,9 +1,9 @@
 <!--miniprogram/pages/index/index.wxml-->
 
 <view class="section">
-    <view class="section__title">请选择年龄</view>
+    <view class='age'>1. 请选择患者年龄</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-      <view class="picker">
+      <view class="picker1">
       <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
         disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 当前选择：{{array[index]}}
         </button>
@@ -13,15 +13,38 @@
     </picker>
   </view>
   <view class="section">
-    <view class="section__title">请选择鼻窦类型</view>
+    <view class='type'>2. 请选择拟做手术的鼻窦类型</view>
     <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
-      <view class="picker">
-        当前选择：{{array2[index2]}}
+      <view class="picker2">
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 当前选择：{{array2[index2]}}
+        </button>
+        
       </view>
     </picker>
   </view>
 
-  <view class="btn-area">
-    <button form-type="submit" bindtap='LogBtn'>提交</button>
+  <view class='btn1'>
+    <button form-type="submit" bindtap='LogBtn'>确 定</button>
   </view>
+
+<view class='backgroundIcon'>
+<image class='icon'
+src='https://s2.ax1x.com/2019/08/12/eza1Qe.th.png'mode="widthFix"style="width: 120rpx; height: 120rpx;"lazy-load="{{true}}"></image>
+</view>
+
+<view class='daoguan'>
+<image class='daoguanpic'
+src='https://s2.ax1x.com/2019/08/12/ezftTf.md.png'mode="widthFix"style="width: 250rpx; height: 250rpx;"lazy-load="{{true}}"></image>
+</view>
+
+
+<view class='anshiqing'>
+<image class='anshiqingpic'
+src='https://s2.ax1x.com/2019/08/12/ezGOW4.md.png'mode="widthFix"style="width: 300rpx; height: 300rpx;"lazy-load="{{true}}"></image>
+</view>
+
+<modal title='提示' hidden="{{modalHidden}}" bindcancel='modalCancel' bindConfirm='modalConfirm'>
+    年龄/鼻窦类型未选择
+</modal>
 
