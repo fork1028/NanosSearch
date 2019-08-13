@@ -1,9 +1,5 @@
 <!--miniprogram/pages/logs/logs.wxml-->
 
-<view class='backgroundImage'>
-<image class='nanos'
-src='https://s2.ax1x.com/2019/08/12/ezJESH.png'mode="widthFix"></image>
-</view>
 
 <wxs module="output1">
 var getOutput=function(choice1){
@@ -37,15 +33,15 @@ var getOutput=function(choice2){
 module.exports.getOutput=getOutput;
 </wxs>
 <view class='selectedAge'>
-<text>您选择的年龄为：</text>
+<text>患者的年龄为：</text>
 <text class='choice1'>{{choice1}}</text>
 </view>
 <view class='selectedType'>
-<text>您选择的鼻窦类型为：</text>
+<text>拟手术的鼻窦类型为：</text>
 <text class='choice2'>{{choice2}}</text>
 </view>
 <view class='output'>
-<text>选择结果：</text>
+<text>产品型号：</text>
 </view>
 <view class='qiunang'>
 <text>鼻窦球囊导管：</text>
@@ -59,7 +55,19 @@ module.exports.getOutput=getOutput;
 <button form-type="submit" bindtap='LogBtn'>重新选择</button>
 </view>
 
+<view class='backgroundImage'>
+<image class='nanos'
+src='https://s2.ax1x.com/2019/08/12/ezJESH.md.png'mode="widthFix"lazy-load="{{true}}"></image>
+</view>
+
+
+<view class='iconAndBtn'>
 <view class='backgroundIcon'>
 <image class='icon'
-src='https://s2.ax1x.com/2019/08/12/eza1Qe.png'mode="widthFix"style="width: 80px; height: 80px;"></image>
+src='https://s2.ax1x.com/2019/08/12/eza1Qe.th.png'mode="widthFix"style="width: 120rpx; height: 120rpx;"lazy-load="{{true}}"></image>
+</view>
+
+<view class='feedbackbtn'>
+<button open-type='feedback' type='primary'>意见反馈</button>
+</view>
 </view>

@@ -1,5 +1,19 @@
 <!--miniprogram/pages/index/index.wxml-->
 
+<view class="touch"  bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" ></view>
+
+<view class='block1'>
+<view class='anshiqing'>
+<image class='anshiqingpic'
+src='https://s2.ax1x.com/2019/08/12/ezGOW4.md.png'mode="widthFix"style="width: 300rpx; height: 300rpx;"lazy-load="{{true}}"></image>
+</view>
+
+<view class='daoguan'>
+<image class='daoguanpic'
+src='https://s2.ax1x.com/2019/08/12/ezftTf.md.png'mode="widthFix"style="width: 250rpx; height: 250rpx;"lazy-load="{{true}}"></image>
+</view>
+</view>
+
 <view class="section">
     <view class='age'>1. 请选择患者年龄</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
@@ -33,16 +47,8 @@
 src='https://s2.ax1x.com/2019/08/12/eza1Qe.th.png'mode="widthFix"style="width: 120rpx; height: 120rpx;"lazy-load="{{true}}"></image>
 </view>
 
-<view class='daoguan'>
-<image class='daoguanpic'
-src='https://s2.ax1x.com/2019/08/12/ezftTf.md.png'mode="widthFix"style="width: 250rpx; height: 250rpx;"lazy-load="{{true}}"></image>
-</view>
 
 
-<view class='anshiqing'>
-<image class='anshiqingpic'
-src='https://s2.ax1x.com/2019/08/12/ezGOW4.md.png'mode="widthFix"style="width: 300rpx; height: 300rpx;"lazy-load="{{true}}"></image>
-</view>
 
 <modal title='提示' hidden="{{modalHidden}}" bindcancel='modalCancel' bindConfirm='modalConfirm'>
     年龄/鼻窦类型未选择

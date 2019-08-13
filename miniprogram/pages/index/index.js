@@ -7,6 +7,11 @@ var isApproved=app.globalData.isApproved;
 var choice1;
 var choice2;
 
+var touchDot = 0;//触摸时的原点
+var time = 0;// 时间记录，用于滑动时且时间小于1s则执行左右滑动
+var interval = "";// 记录/清理时间记录
+
+
 Page({
 
   /**
@@ -32,7 +37,7 @@ Page({
     if (isApproved==false){
       wx.showModal({
         title: '提示',
-        content: '还未选择年龄/鼻窦类型\r\n *若您左滑返回首页，请重新选择2项数据再确定*',
+        content: '还未选择年龄/鼻窦类型',
         showCancel:false,
         success: function (res) {
           if (res.confirm) {
@@ -48,10 +53,10 @@ Page({
         url: '../logs/logs?choice1=' + choice1 + '&choice2=' + choice2
       })
       isApproved=false;
-      choice1=undefined;
-      choice2=undefined;
     }
   },
+
+
 
   data: {
 
@@ -148,6 +153,8 @@ Page({
       modalHidden: true
     })
   }
+
+  
 
   
 

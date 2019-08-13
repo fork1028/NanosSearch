@@ -3,8 +3,8 @@
 Page({
 
   LogBtn: function (options) {
-    wx.navigateTo({
-      url: '../index/index'
+    wx.navigateBack({
+      url:'../index/index'
     })
   },
 
@@ -76,4 +76,6 @@ Page({
   onShareAppMessage: function () {
 
   }
+
+  
 })

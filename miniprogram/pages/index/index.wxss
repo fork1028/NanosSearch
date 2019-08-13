@@ -1,42 +1,36 @@
 /* miniprogram/pages/index/index.wxss */
 /** wxss **/
 
-
-.backgroundIcon{
+.anshiqing{
   display: flex;
-  justify-content: flex-end;
-  margin-right: 50rpx;
-  margin-bottom:50rpx;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right:0;
+  justify-content: left;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
 }
 
 .daoguan{
   display: flex;
-  margin-bottom:50rpx;
+  margin-top:20rpx;
+  margin-right:20rpx;
   justify-content: flex-end;
-  position: fixed;
-  top:20rpx;
-  left: 0;
-  right:20rpx;
+
 }
 
-.anshiqing{
+
+
+.backgroundIcon{
   display: flex;
-  justify-content: flex-front;
-  margin-bottom:50rpx;
-  position: fixed;
-  top: 40rpx;
-  left: 20rpx;
-  right:0;
+  justify-content: flex-end;
+  margin-right: 20rpx;
+  
 }
+
+
 
 .age{
   display:flex;                    
    justify-content: left; 
-   margin-top: 300rpx;
+   margin-top: 150rpx;
    margin-left: 30rpx;
 }
 

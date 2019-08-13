@@ -5,10 +5,9 @@
   justify-content: flex-end;
   margin-right: 50rpx;
   margin-bottom:50rpx;
-  position: fixed;
-  bottom: 200rpx;
-  left: 0;
-  right:0;
+  bottom: 100rpx;
+  left: 0rpx;
+  right:0rpx;
 }
 
 
@@ -18,10 +17,9 @@
   justify-content: flex-end;
   margin-right: 50rpx;
   margin-bottom:50rpx;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right:0;
+  bottom: 0rpx;
+  left: 0rpx;
+  right:0rpx;
 }
 
 .selectedAge{
@@ -54,26 +52,30 @@
 
 .output1{
   color: rgb(0, 83, 179);
+  font-weight: bold;
 }
 .output2{
   color: rgb(0, 83, 179);
+  font-weight: bold;
 }
 .qiunang{
   display:flex;                    
    justify-content: left; 
    margin-top: 100rpx;
-   margin-left: 30rpx;
+   margin-left: 40rpx;
+   font-weight: bold;
 }
 
 .yindao{
   display:flex;                    
    justify-content: left; 
    margin-top: 100rpx;
-   margin-left: 30rpx;
+   margin-left: 40rpx;
+   font-weight: bold;
 }
 
 .btn {
-  margin-top: 150rpx;
+  margin-top: 170rpx;
   margin-left:200rpx;
   margin-right:200rpx;
   background-color: #DDE8EF;
@@ -81,4 +83,13 @@
   border-radius: 98rpx;
   display: flex;
   justify-content: center;
+}
+
+.button-hover{
+  background-color:#DDE8EF;
+}
+
+.feedbackbtn{
+  display: flex;
+  justify-content: left;
 }
