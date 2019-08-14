@@ -2,72 +2,97 @@
 
 
 <wxs module="output1">
-var getOutput=function(choice1){
-  if(choice1=="6-10岁")
-    return "0516或0524"
-  if(choice1=="10-16岁")
-    return "0616或0624"
-  if(choice1==">16岁")
-    return "0716或0724"
-}
-module.exports.getOutput=getOutput;
+  var getOutput = function(choice1) {
+    if (choice1 == "6-10岁")
+      return "0516或0524"
+    if (choice1 == "10-16岁")
+      return "0616或0624"
+    if (choice1 == ">16岁")
+      return "0716或0724"
+  }
+  module.exports.getOutput = getOutput;
 </wxs>
 
 <wxs module="output2">
-var getOutput=function(choice2){
-  if(choice2=="上颌窦")
-    return "90或110"
-  if(choice2=="额窦")
-    return "70"
-  if(choice2=="蝶窦")
-    return "0或30"
-  if(choice2=="上颌窦+额窦")
-    return "90或110+70"
-  if(choice2=="上颌窦+蝶窦")
-    return "90或110+0或30"
-  if(choice2=="额窦+蝶窦")
-    return "70+0或30"
-  if(choice2=="上颌窦+额窦+蝶窦")
-    return "90或110+70+0或30"
-}
-module.exports.getOutput=getOutput;
+  var getOutput = function(choice2) {
+    if (choice2 == "上颌窦")
+      return "一个，90°或110°"
+    if (choice2 == "额窦")
+      return "一个，70°"
+    if (choice2 == "蝶窦")
+      return "一个，0°或30°"
+    if (choice2 == "上颌窦+额窦")
+      return "两个，90°或110°+70°"
+    if (choice2 == "上颌窦+蝶窦")
+      return "两个，90°或110°+0°或30°"
+    if (choice2 == "额窦+蝶窦")
+      return "两个，70°+0°或30°"
+    if (choice2 == "上颌窦+额窦+蝶窦")
+      return "三个，90°或110°+70°+0°或30°"
+  }
+  module.exports.getOutput = getOutput;
 </wxs>
+
 <view class='selectedAge'>
-<text>患者的年龄为：</text>
-<text class='choice1'>{{choice1}}</text>
-</view>
-<view class='selectedType'>
-<text>拟手术的鼻窦类型为：</text>
-<text class='choice2'>{{choice2}}</text>
-</view>
-<view class='output'>
-<text>产品型号：</text>
-</view>
-<view class='qiunang'>
-<text>鼻窦球囊导管：</text>
-<text class='output1'>{{output1.getOutput(choice1)}}</text>
-</view>
-<view class='yindao'>
-<text>鼻窦引导导管：</text>
-<text class='output2'>{{output2.getOutput(choice2)}}</text>
-</view>
-<view class='btn'>
-<button form-type="submit" bindtap='LogBtn'>重新选择</button>
+  <text>患者的年龄为：</text>
+  <text class='choice1'>{{choice1}}</text>
 </view>
 
+<view class='selectedType'>
+  <text>拟手术的鼻窦类型为：</text>
+  <text class='choice2'>{{choice2}}</text>
+</view>
+
+<view class='output'>
+  <text>▼产品型号▼</text>
+</view>
+
+<view class='qiunang'>
+  <text>鼻窦球囊导管：</text>
+  <text class='output1'>{{output1.getOutput(choice1)}}</text>
+</view>
+
+<view class='yindao'>
+  <text>鼻窦引导导管：</text>
+  <text class='output2'>{{output2.getOutput(choice2)}}</text>
+</view>
+
+<view class='btn'>
+  <button form-type="submit" bindtap='LogBtn'>重新选择</button>
+</view>
+
+<view class='container'>
+
+  <button class='button' bindtap='buttonTap'>外包装图示(请点击)</button>
+
+  <modal hidden="{{hidden}}" title="外包装图示" confirm-text="确定" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}"
+  catchtouchmove="true">
+  <text class="content">点击图片查看大图</text>
+   <view>
+      <image bindtap="event" class="picture" src="https://s2.ax1x.com/2019/08/14/mFiVpt.png" mode='aspectFit' style='width:100%;'></image>
+    </view>
+</modal>
+
+</view>
+
+<view class='warning'>
+
+<text>注意事项：每套产品只包含一个角度的引导导管，当手术需要多个引导导管时另外多出的引导导管厂家赠送；\r\n例如，患者24岁，拟做上颌窦和额窦的鼻窦球囊手术，术前请准备好鼻窦球囊型号为0716或0724、引导导管角度90°或者110°的产品，另外赠送70°引导导管一个。
+</text>
+</view>
+
+
 <view class='backgroundImage'>
-<image class='nanos'
-src='https://s2.ax1x.com/2019/08/12/ezJESH.md.png'mode="widthFix"lazy-load="{{true}}"></image>
+  <image class='nanos' src='https://s2.ax1x.com/2019/08/12/ezJESH.md.png' mode="widthFix" lazy-load="{{true}}"></image>
 </view>
 
 
 <view class='iconAndBtn'>
-<view class='backgroundIcon'>
-<image class='icon'
-src='https://s2.ax1x.com/2019/08/12/eza1Qe.th.png'mode="widthFix"style="width: 120rpx; height: 120rpx;"lazy-load="{{true}}"></image>
-</view>
+  <view class='backgroundIcon'>
+    <image class='icon' src='https://s2.ax1x.com/2019/08/12/eza1Qe.th.png' mode="widthFix" style="width: 120rpx; height: 120rpx;" lazy-load="{{true}}"></image>
+  </view>
 
-<view class='feedbackbtn'>
-<button open-type='feedback' type='primary'>意见反馈</button>
-</view>
+  <view class='feedbackbtn'>
+    <button open-type='feedback' type='primary'>意见反馈</button>
+  </view>
 </view>

@@ -1,95 +1,124 @@
 /* miniprogram/pages/logs/logs.wxss */
 
-.backgroundImage{
- display: flex;
-  justify-content: flex-end;
-  margin-right: 50rpx;
-  margin-bottom:50rpx;
-  bottom: 100rpx;
-  left: 0rpx;
-  right:0rpx;
-}
-
-
-
-.backgroundIcon{
+.selectedAge {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 50rpx;
-  margin-bottom:50rpx;
-  bottom: 0rpx;
-  left: 0rpx;
-  right:0rpx;
+  justify-content: left;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
 }
 
-.selectedAge{
-  display:flex;                    
-   justify-content: left; 
-   margin-top: 100rpx;
-   margin-left: 30rpx;
-}
-
-.selectedType{
-  display:flex;                    
-   justify-content: left; 
-   margin-top: 100rpx;
-   margin-left: 30rpx;
-}
-
-.output{
-  display:flex;                    
-   justify-content: center; 
-   margin-top: 100rpx;
-   margin-left: 30rpx;
-   
-}
-.choice1{
-  color: rgb(0, 83, 179);
-}
-.choice2{
+.choice1 {
   color: rgb(0, 83, 179);
 }
 
-.output1{
+.tushi{
+  justify-content: center;
+}
+
+.selectedType {
+  display: flex;
+  justify-content: left;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+
+.choice2 {
+  color: rgb(0, 83, 179);
+}
+
+.output {
+  display: flex;
+  justify-content: center;
+  margin-top: 80rpx;
+  margin-left: 30rpx;
+}
+
+
+.qiunang {
+  display: flex;
+  justify-content: left;
+  margin-top: 50rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+
+.output1 {
   color: rgb(0, 83, 179);
   font-weight: bold;
 }
-.output2{
+
+.yindao {
+  display: flex;
+  justify-content: left;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+  font-weight: bold;
+}
+
+.output2 {
   color: rgb(0, 83, 179);
   font-weight: bold;
 }
-.qiunang{
-  display:flex;                    
-   justify-content: left; 
-   margin-top: 100rpx;
-   margin-left: 40rpx;
-   font-weight: bold;
-}
 
-.yindao{
-  display:flex;                    
-   justify-content: left; 
-   margin-top: 100rpx;
-   margin-left: 40rpx;
-   font-weight: bold;
+
+.warning{
+  margin-top: 20rpx;
+  margin-left:40rpx;
+  margin-right:40rpx;
+  font-size: 30rpx;
 }
 
 .btn {
-  margin-top: 170rpx;
-  margin-left:200rpx;
-  margin-right:200rpx;
-  background-color: #DDE8EF;
+  margin-top: 50rpx;
+  margin-left: 250rpx;
+  margin-right: 250rpx;
+  background-color: #dde8ef;
   color: white;
   border-radius: 98rpx;
   display: flex;
   justify-content: center;
 }
 
-.button-hover{
-  background-color:#DDE8EF;
+.button{
+  margin-top: 50rpx;
+  margin-left: 40rpx;
+  background-color: #ff7300;
+  color: white;
+  display:flex;
 }
 
-.feedbackbtn{
+.button-hover {
+  background-color: #dde8ef;
+}
+
+.button.button-hover{
+  background-color: #e77415;
+}
+
+.backgroundImage {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40rpx;
+  left: 0rpx;
+  right: 0rpx;
+}
+
+.feedbackbtn {
+  float: left;
   display: flex;
   justify-content: left;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+}
+
+.icon {
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 50rpx;
+  margin-top: 10rpx;
+}
+
+.content{
+  margin-left: 30%; 
 }

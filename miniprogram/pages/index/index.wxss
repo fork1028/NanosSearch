@@ -1,72 +1,63 @@
 /* miniprogram/pages/index/index.wxss */
+
 /** wxss **/
 
-.anshiqing{
-  display: flex;
-  justify-content: left;
-  margin-top: 20rpx;
-  margin-left: 20rpx;
+
+.anshiqingpic {
+ float:left;
+ width: 60%;
 }
 
-.daoguan{
-  display: flex;
-  margin-top:20rpx;
-  margin-right:20rpx;
-  justify-content: flex-end;
-
+.daoguanpic {
+ float:right;
+ width: 40%;
 }
 
-
-
-.backgroundIcon{
+.backgroundIcon {
   display: flex;
   justify-content: flex-end;
   margin-right: 20rpx;
-  
+  margin-top: 40rpx;
 }
 
-
-
-.age{
-  display:flex;                    
-   justify-content: left; 
-   margin-top: 150rpx;
-   margin-left: 30rpx;
+.age {
+  display: flex;
+  justify-content: left;
+  margin-top: 150rpx;
+  margin-left: 30rpx;
 }
 
-.picker1{
-  display:flex;                    
-   justify-content: center; 
-   margin-top: 50rpx;
+.picker1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
 }
 
-.type{
-  display:flex;                    
-  justify-content: left; 
+.type {
+  display: flex;
+  justify-content: left;
   margin-top: 100rpx;
-   margin-left: 30rpx;
+  margin-left: 30rpx;
 }
 
-
-.picker2{
-  display:flex;                    
-   justify-content: center; 
-   margin-top: 50rpx;
+.picker2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 50rpx;
 }
 
-.button-hover{
-  background-color:#DDE8EF;
+.button-hover {
+  background-color: #dde8ef;
 }
 
 .btn1 {
   margin-top: 200rpx;
-  margin-left:200rpx;
-  margin-right:200rpx;
-  background-color: #DDE8EF;
+  margin-left: 250rpx;
+  margin-right: 250rpx;
+  background-color: #dde8ef;
   color: white;
   border-radius: 98rpx;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
