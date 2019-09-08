@@ -1,0 +1,59 @@
+<!--miniprogram/pages/position/position.wxml-->
+
+<view>
+
+<view class='line'>
+  <text>
+- 您适合做鼻窦球囊扩张术（BS）吗？-
+  </text>
+  </view>
+
+  <view class='position'>
+  2. 鼻窦炎病变位置：
+  </view>
+  
+  
+    <view class="picker">
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="choose" hover-class="other-button-hover"> 
+      点击此处选择
+      </button>
+    </view>
+
+    <wxs module="output">
+  var getOutput = function(index0) {
+    if(index0==0)
+     return "仅为筛窦病变";
+     if(index0==1)
+     return "上颌窦、额窦、蝶窦的单窦病变或多窦病变";
+     if(index0==2)
+     return "筛窦病变合并上颌窦、额窦、蝶窦的多窦病变";
+  }
+  module.exports.getOutput = getOutput;
+</wxs>
+  
+  <view class='result'>
+  <text>
+      {{itemList[index0]}}
+      </text>
+
+  </view>
+
+<view class='confirm'>
+  <button form-type="submit" bindtap='LogBtn'>
+  下一步
+  </button>
+  <modal title="结果" hidden="{{modalHidden}}" bindconfirm="modalConfirm" no-cancel="{{nocancel}}" catchtouchmove="true">
+   <text class="content">
+    不适合BS手术
+    </text>
+  </modal>
+</view>
+
+<view class='instruction'>
+<text>
+说明：该小程序仅作为BS术前的筛选指导，无法替代医疗专业人士的意见，请在临床医生的协助下进行判断，最终临床治疗方案需由临床医生给出。
+  </text>
+
+  </view>
+
+</view>

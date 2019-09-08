@@ -1,0 +1,78 @@
+<!--miniprogram/pages/seventh/seventh.wxml-->
+
+
+<view>
+
+<view class='line'>
+  <text>
+- 您适合做鼻窦球囊扩张术（BS）吗？-
+  </text>
+  </view>
+
+  <view class='seventh'>
+  <text>
+ 7. 是否存在以下合并症：
+ </text>
+  </view>
+
+  
+
+
+  <view class='description'>
+  <text>
+ 变异的窦口鼻窦复合体、阻塞性腺样体肥大、变应性真菌性鼻窦炎、睫状体运动障碍综合征、粘多糖蓄积症、粘多糖纤维化
+ </text>
+  </view>
+  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" hover-class="other-button-hover"> 
+      点击此处选择
+      </button>
+    
+    </view>
+  </picker>
+
+  <view class='result'>
+ <text>
+      {{array[index]}}
+      </text>
+  </view>
+
+<view class='confirm'>
+  <button form-type="submit" bindtap='LogBtn'>
+  查看结果
+  </button>
+  <modal title="结果" hidden="{{modalHidden}}" bindconfirm="modalConfirm" no-cancel="{{nocancel}}" catchtouchmove="true">
+   <text class="content">
+    不适合BS手术
+    </text>
+  </modal>
+  <modal title="结果" hidden="{{modalHidden1}}" bindconfirm="modalConfirm1" no-cancel="{{nocancel}}" catchtouchmove="true">
+   <text class="content">
+    适合做BS手术，同时考虑FESS解决筛窦病变
+    </text>
+  </modal>
+  <modal title="结果" hidden="{{modalHidden2}}" bindconfirm="modalConfirm2" no-cancel="{{nocancel}}" catchtouchmove="true">
+   <text class="content">
+    适合做BS手术
+    </text>
+  </modal>
+</view>
+
+<view class='back'>
+  <button form-type="submit" bindtap='BackBtn'>
+  回到首页
+  </button>
+</view>
+
+<view class='instruction'>
+<text>
+说明：该小程序仅作为BS术前的筛选指导，无法替代医疗专业人士的意见，请在临床医生的协助下进行判断，最终临床治疗方案需由临床医生给出。
+  </text>
+  </view>
+
+</view>
+
+
+

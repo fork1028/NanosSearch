@@ -1,0 +1,34 @@
+/* miniprogram/pages/home/home.wxss */
+
+.anshiqingpic {
+ float:left;
+ width: 60%;
+}
+
+.daoguanpic {
+ float:right;
+ width: 40%;
+}
+
+.backgroundIcon {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20rpx;
+  margin-top: 100rpx;
+}
+
+.button1{
+  margin-top:150rpx;
+  display:flex;
+  justify-content: center;
+}
+
+.button2{
+  margin-top:80rpx;
+  display:flex;
+  justify-content: center;
+}
+
+.button-hover {
+  background-color: #dde8ef00;
+}
