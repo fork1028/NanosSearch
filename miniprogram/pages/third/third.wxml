@@ -1,0 +1,48 @@
+<!--miniprogram/pages/third/third.wxml-->
+
+<view>
+
+<view class='line'>
+  <text>
+- 您适合做鼻窦球囊扩张术（BS）吗？-
+  </text>
+
+  </view>
+
+  <view class='effective'>
+  3. 药物治疗是否有效：
+  </view>
+  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <button type="default" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}"  hover-class="other-button-hover"> 
+      点击此处选择
+      </button>
+    </view>
+  </picker>
+
+  <view class='result'>
+ <text>
+      {{array[index]}}
+      </text>
+  </view>
+
+<view class='confirm'>
+  <button form-type="submit" bindtap='LogBtn'>
+  下一步
+  </button>
+  <modal title="结果" hidden="{{modalHidden}}" bindconfirm="modalConfirm" no-cancel="{{nocancel}}" catchtouchmove="true">
+   <text class="content">
+    暂时不适合BS手术
+    </text>
+  </modal>
+</view>
+
+<view class='instruction'>
+<text>
+说明：该小程序仅作为BS术前的筛选指导，无法替代医疗专业人士的意见，请在临床医生的协助下进行判断，最终临床治疗方案需由临床医生给出。
+  </text>
+
+  </view>
+
+</view>

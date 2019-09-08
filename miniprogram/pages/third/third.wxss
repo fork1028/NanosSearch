@@ -1,0 +1,60 @@
+/* miniprogram/pages/third/third.wxss */
+
+.line{
+display: flex;
+  margin-top: 50rpx;
+  justify-content: center;
+}
+
+.effective{
+display: flex;
+  justify-content: left;
+  margin-top: 150rpx;
+  margin-left: 30rpx;
+  font-size:50rpx;
+}
+
+.picker{
+display: flex;
+  justify-content: center;
+  margin-top: 80rpx;
+}
+
+.result{
+  display: flex;
+  justify-content: center;
+  margin-top: 5rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #8802b1;
+}
+
+.button-hover {
+  background-color: #dde8ef;
+}
+
+.confirm {
+  margin-top: 200rpx;
+  margin-left: 250rpx;
+  margin-right: 250rpx;
+  background-color: #dde8ef;
+  border-radius: 98rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.instruction{
+  margin-top: 100rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  display: flex;
+  font-style:oblique;
+}
+
+.content{
+  font-size:40rpx;
+  display:flex;
+  justify-content: center;
+}

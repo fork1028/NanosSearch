@@ -1,7 +1,15 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/age/age",
+    "pages/position/position",
+    "pages/third/third",
+    "pages/fourth/fourth",
+    "pages/fifth/fifth",
+    "pages/sixth/sixth",
+    "pages/seventh/seventh"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
